@@ -8,6 +8,7 @@ import {
 import Login from "./pages/Login";
 import AuthMiddleware from "./middlewares/AuthMiddleware";
 import { AuthContext, useAuthContext } from "./context/AuthContext";
+import DashBoard from "./pages/DashBoard";
 
 function App() {
   const { isAuthenticated } = useAuthContext(AuthContext);
@@ -25,7 +26,7 @@ function App() {
           path="/dashboard"
           element={
             <AuthMiddleware>
-              <div>Dashboard</div>
+              <DashBoard />
             </AuthMiddleware>
           }
         />

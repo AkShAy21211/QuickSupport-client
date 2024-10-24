@@ -5,14 +5,17 @@ module.exports = {
     extend: {
       colors: {
         gray: "#101010",
+        green:"#4CAF50"
       },
-      borderRadius:{
-        'rounded-10':'10px',
-      }
-      
-     
+      backgroundColor: {
+        secondaryBlack: "#101010",
+      },
+      borderRadius: {
+        "rounded-10": "10px",
+      },
+    
     },
-
+    
   },
   plugins: [],
-}
+};
