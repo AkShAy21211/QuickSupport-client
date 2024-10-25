@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# QuickSupport
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+This project is a Help & Support Dashboard that allows users to log in, access support resources, and raise tickets for issues or inquiries. It includes functionalities for user authentication, a help and support page, and a ticketing system that captures support requests in a database.
 
-## Available Scripts
+## Login Screen
+![Screenshot 2024-10-25 100229](https://github.com/user-attachments/assets/886c5db9-0eae-4b51-8aaa-0fd3d2b84eb9)
 
-In the project directory, you can run:
+## DashBoard Screen
+![Screenshot 2024-10-25 100241](https://github.com/user-attachments/assets/98952f75-6986-4519-94b0-23b8e1e380fe)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **Login Page**: 
+   - Users can log in using their email credentials.
+   - The login functionality authenticates users and maintains session management.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. **Help & Support Page**: 
+   - Accessible from the dashboard after logging in.
+   - Contains information and resources to assist users with common issues.
 
-### `npm test`
+3. **Ticket Management**: 
+   - Users can raise support tickets using a form on the Help & Support page.
+   - Upon submission, tickets are captured in the database, and a unique Ticket ID is generated for each request.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+### Prerequisites
+- Node.js (version X.X.X)
+- MongoDB (or your chosen database)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   git clone https://github.com/yourusername/your-repo-name.git
 
-### `npm run eject`
+2. Navigate into the project directory:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```bash
+   cd your-repo-name
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Install the required dependencies:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```bash
+   npm install
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. Set up environment variables:
 
-## Learn More
+-Create a .env file in the root directory and define the necessary variables (e.g., database connection strings, JWT secret, etc.).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+5.Start the development server:
 
-### Code Splitting
+   ```bash
+  npm run start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Open your browser and navigate to http://localhost:3000 to view the application.
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
