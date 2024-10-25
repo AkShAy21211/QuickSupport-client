@@ -39,7 +39,7 @@ const LoginForm = ({ email, setEmail, error, onSubmit }) => {
           </div>
           <div id="social-wrapper" className="flex flex-col gap-6">
             <SocialButton label={"Continue with Google"} image={googleIcon} />
-            <SocialButton label={"Continue with Google"} image={appleIcon} />
+            <SocialButton label={"Continue with Apple"} image={appleIcon} />
           </div>
         </form>
       </div>
