@@ -4,7 +4,6 @@ import { AuthContext, useAuthContext } from "../context/AuthContext";
 const AuthMiddleware = ({ children }) => {
   const { isAuthenticated } = useAuthContext(AuthContext);
 
-  console.log("From middleware:", isAuthenticated);
 
   return isAuthenticated ? children : <Navigate to={"/login"} replace />;
 };

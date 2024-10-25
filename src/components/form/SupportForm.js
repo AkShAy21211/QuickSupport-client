@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import Button from "../button/Button";
 import backArrow from "../../assests/back.png";
@@ -60,7 +60,7 @@ const SupportForm = ({
               </option>
              {
               issues.map((issue,i) => (
-                <option className="bg-black text-white " key={issue.issue} value={issue._id}>
+                <option  key={issue.issue} value={issue._id}>
                   {issue.issue}
                 </option>
               ))

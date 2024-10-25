@@ -50,7 +50,7 @@ const DashBoard = () => {
     setCategoryError("");
 
     try {
-      const response = await createTicket(description, category);
+      await createTicket(description, category);
       setDescription("");
       setCategory("");
       setDescriptionError("");
