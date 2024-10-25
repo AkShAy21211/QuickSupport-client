@@ -15,7 +15,7 @@ const LoginForm = ({ email, setEmail, error, onSubmit }) => {
       <div id="form-container" className="w-full">
         <form action="" className="flex flex-col w-full" onSubmit={onSubmit}>
           <label htmlFor="email" className="text-white mb-1">
-            Email:
+            Email
           </label>
           <input
             type="email"
