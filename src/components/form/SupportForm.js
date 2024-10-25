@@ -60,7 +60,7 @@ const SupportForm = ({
               </option>
              {
               issues.map((issue,i) => (
-                <option  key={issue.issue} value={issue._id}>
+                <option className="bg-black text-white " key={issue.issue} value={issue._id}>
                   {issue.issue}
                 </option>
               ))
