@@ -5,21 +5,22 @@ const createAxiosInstance = () => {
   const token = localStorage.getItem("token");
 
   const axiosInstance = axios.create({
-    baseURL: "http://localhost:5000/api",
+    baseURL: process.env.REACT_APP_BACKEND_URL,
     withCredentials: true,
     headers: {
       "Content-Type": "application/json",
       Authorization: token ? `Bearer ${token}` : undefined,
     },
-  });
 
+  });
+  axiosInstance.defaults.baseURL = process.env.REACT_APP_BACKEND_URL
   // Add a response interceptor
   axiosInstance.interceptors.response.use(
     response => response,
     async error => {
       const originalRequest = error.config;
 
-      if (error && !originalRequest._retry) {
+      if (error.response.status === 401 && !originalRequest._retry) {
         originalRequest._retry = true;
 
         try {
