@@ -22,6 +22,8 @@ const AuthProvider = ({ children }) => {
   };
 
   const setLogout = () => {
+    console.log('logout');
+    
     localStorage.removeItem("token");
     setIsAuthenticated(false);
   };

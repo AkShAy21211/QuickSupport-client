@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import menuIcon from "../assests/menu.png";
 import menuItem from "../constants";
+import { AuthContext, useAuthContext } from "../context/AuthContext";
 const SideBar = ({ isOpen, toggleSidebar }) => {
   const sidebarClass = isOpen ? "w-[280px]" : "w-[80px]";
   const [selected, setSelected] = useState("");
+  const { setLogout } = useAuthContext(AuthContext);
+
   return (
     <div
       className={`sidebar bg-black  h-full transition-all fixed z-50 duration-300 ${sidebarClass} px-4`}
@@ -18,7 +21,12 @@ const SideBar = ({ isOpen, toggleSidebar }) => {
         {menuItem.map((item, i) => (
           <li
             key={i}
-            onClick={() => setSelected(item.label)}
+            onClick={() => {
+              setSelected(item.label);
+              if (item.label == "Logout") {
+                setLogout();
+              }
+            }}
             className={`relative group ${
               selected === item.label
                 ? "bg-white/10 text-white"

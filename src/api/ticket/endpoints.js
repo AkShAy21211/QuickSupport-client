@@ -1,5 +1,6 @@
 const ticketEndPoints={
 
-    create:"/ticket/create"
+    create:"/ticket/create",
+    getIssues:"/ticket/issue"
 }
 export default ticketEndPoints;

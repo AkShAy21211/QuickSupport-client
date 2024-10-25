@@ -4,15 +4,17 @@ import userWithSheildIcon from "../assests/shield-user.png";
 import notification from "../assests/notification.png";
 import profile from "../assests/profile.png";
 
-const Header = () => {
+const Header = ({ isOpen }) => {
   return (
     <header
       id="header-container"
-      className="bg-black h-20  flex justify-between p-4 border-l border-l-white/40"
+      className={`bg-black h-20  flex justify-between gap-1 p-4 border-l border-l-white/40`}
     >
       <div
         id="header-left-section"
-        className="w-[343px] h-12 rounded-rounded-10  gap-2 relative hidden md:flex"
+        className={`${
+          isOpen ? "w-32px md:w-[343px]" : "w-12 md:w-[343px]"
+        } h-12 rounded-rounded-10  gap-2 relative  md:flex`}
       >
         <img
           src={searchIcon}
@@ -28,11 +30,19 @@ const Header = () => {
 
       <div
         id="header-right-section"
-        className="flex items-center gap-4 h-10 w-[239px]"
+        className={` ${
+          isOpen ? "hidden md:flex" : "flex"
+        } items-center gap-4 h-10 w-[239px]`}
       >
-        <div className="text-green flex w-[143px] h-10 border border-green gap-1 p-2 rounded-lg cursor-pointer">
+        <div
+          className={`text-green flex items-center ${
+            isOpen
+              ? "md:text-sm md:w-[143px]"
+              : " w-28 text-xs md:text-sm md:w-[143px]"
+          } h-10 border border-green gap-1 p-2 rounded-lg cursor-pointer`}
+        >
           <img src={userWithSheildIcon} alt="" />
-          <p className="text-center text-sm text-nowrap">Trusted Member</p>
+          <p className="text-center  text-nowrap">Trusted Member</p>
         </div>
 
         <img src={notification} className="w-6 h-6 cursor-pointer" alt="" />

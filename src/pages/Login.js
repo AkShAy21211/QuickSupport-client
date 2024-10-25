@@ -31,7 +31,6 @@ const Login = () => {
     }
 
     try {
-      alert(email);
       setError("");
     } catch (error) {
       setError("Failed to submit form");
